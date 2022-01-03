@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+//primary
+$primary: hsl(223, 87%, 63%);
+
+//secondary
+$paleBlue: hsl(223, 100%, 88%);
+$lightRed: hsl(354, 100%, 66%);
+
+//Neutral
+$gray: hsl(0, 0%, 59%);
+$veryDarkBlue: hsl(209, 33%, 12%);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 375px;
+    margin: 0 auto;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: "Libre Franklin", sans-serif;
+        .logo {
+            background-image: url("/images/logo.svg");
+            background-size: 60px;
+            background-position: center;
+            margin: 70px 0;
+            width: 100%;
+            height: 30px;
+            background-repeat: no-repeat;
+        }
+        h1 {
+            text-align: center;
+            font-size: 25px;
+
+            span {
+                color: $gray;
+                font-weight: 300;
+            }
+        }
+        h5 {
+            text-align: center;
+            font-weight: 300;
+            margin: 2em 0 2.5em 0;
+        }
+        form {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            input {
+                width: 100%;
+                padding: 0.9em 2em;
+                margin: 0.5em 3em;
+                border-radius: 50px;
+                outline: none;
+                border: 1px solid $paleBlue;
+            }
+            ::placeholder {
+                opacity: 0.2;
+            }
+            button {
+                width: 100%;
+                padding: 0.9em;
+                margin: 0.5em 3em;
+                border-radius: 50px;
+                border: 1px solid $gray;
+                color: white;
+                background: $primary;
+                cursor: pointer;
+                box-shadow: 0px 3px 5px 1px rgba(79, 125, 243, 0.4);
+            }
+            button:hover {
+                opacity: 0.9;
+            }
+            .error {
+                display: none;
+                font-style: italic;
+                color: $lightRed;
+                font-size: 14px;
+            }
+        }
+        .img {
+            background-image: url("/images/illustration-dashboard.png");
+            background-size: 330px;
+            width: 330px;
+            height: 220px;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0 auto;
+            margin-top: 3em;
+            margin-bottom: 3em;
+        }
+        ul {
+            display: flex;
+            justify-content: center;
+            margin: 4em 0em 2em 0em;
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0.3em;
+                list-style-type: none;
+                text-align: center;
+                a {
+                    svg {
+                        border: 1px solid $paleBlue;
+                        border-radius: 20px;
+                        padding: 0.5em;
+                        height: 35px;
+                        width: 35px;
+                    }
+                    svg:hover {
+                        border: 1px solid $primary;
+                    }
+                    svg:hover path {
+                        fill: white;
+                        padding: 0.5em;
+                    }
+                }
+                a:hover {
+                    background: $primary;
+                    border-radius: 20px;
+                    height: 35px;
+                }
+            }
+        }
+        .reserved {
+            text-align: center;
+            font-size: 10px;
+            color: $gray;
+            margin: 1em 0;
+        }
+    }
+    footer {
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    }
+}
+@media (min-width: 768px) {
+    body {
+        max-width: 768px;
+        .container {
+            form {
+                display: grid;
+                grid-gap: 1em;
+                grid-template-areas:
+                    "input input button"
+                    "error error  error";
+                input {
+                    grid-area: input;
+                }
+                .error {
+                    grid-area: error;
+                    margin-top: -1.5em;
+                    margin-left: 4.5em;
+                    font-size: 12px;
+                }
+                button {
+                    grid-area: button;
+                }
+            }
+            .img {
+                background-size: 500px;
+                width: 500px;
+                height: 320px;
+            }
+        }
+    }
+}
+@media (min-width: 1440px) {
+    body {
+        max-width: 1440px;
+        .container {
+            .logo {
+                background-size: 70px;
+                background-position: center;
+                height: 30px;
+                background-repeat: no-repeat;
+                margin: 60px 0;
+            }
+            h1 {
+                font-size: 40px;
+            }
+            h5 {
+                font-size: 16px;
+                font-weight: 300;
+                margin: 1em 0 2.5em 0;
+            }
+            form {
+                grid-gap: unset;
+                .error {
+                    opacity: 0.6;
+                    margin-top: 0.2em;
+                    margin-left: 1.2em;
+                }
+                input {
+                    width: 400px;
+                    margin: 0.5em 0;
+                }
+                button {
+                    margin: 0.5em 1em;
+                    padding: 1em 3em;
+                }
+            }
+            .img {
+                background-size: 530px;
+                width: 530px;
+                height: 420px;
+                margin-top: unset;
+                margin-bottom: unset;
+            }
+            ul {
+                margin: 1em 0em 2em 0em;
+            }
+        }
+    }
+}
