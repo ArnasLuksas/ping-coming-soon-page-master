@@ -2,7 +2,7 @@
 
 
 
-<h1><a href="">Live site</a></h1>
+<h1><a href="https://loving-mccarthy-adeb08.netlify.app/">Live site</a></h1>
 
 
 ## Technologies
@@ -12,6 +12,7 @@
 - JavaScript
 
 
+ <img src="https://raw.githubusercontent.com/ArnasLuksas/ping-coming-soon-page-master/main/images/image.png" alt="Ping coming soon page" width="500" height="600"> 
 
 ## The challenge
 
