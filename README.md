@@ -12,7 +12,7 @@
 - JavaScript
 
 
- <img src="https://raw.githubusercontent.com/ArnasLuksas/ping-coming-soon-page-master/main/images/image.png" alt="Ping coming soon page" width="500" height="600"> 
+ <img src="https://raw.githubusercontent.com/ArnasLuksas/ping-coming-soon-page-master/main/images/image.png" alt="Ping coming soon page" > 
 
 ## The challenge
 
